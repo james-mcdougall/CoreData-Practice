@@ -35,7 +35,7 @@ class CreateTaskViewController: UIViewController {
 	@IBAction func save(_ sender: UIBarButtonItem) {
 		guard let name = nameTextField.text, !name.isEmpty else { return }
 		let notes = notesTextView.text
-		let task = Task(name: name, notes: notes, complete: complete)
+		Task(name: name, notes: notes, complete: complete)
 		do {
 			try CoreDataStack.sharedCDS.mainContext.save()
 			navigationController?.dismiss(animated: true, completion: nil)

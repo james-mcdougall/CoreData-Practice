@@ -11,7 +11,7 @@ import CoreData
 
 extension Task {
 	
-	convenience init(identifier: UUID = UUID(),
+	@discardableResult convenience init(identifier: UUID = UUID(),
 		 name: String,
 		 notes: String? = nil,
 		 complete: Bool = false,
